@@ -1,0 +1,593 @@
+
+/* =========================================
+   StudyMaster - Main Stylesheet
+   ========================================= */
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+html {
+    scroll-behavior: smooth;
+   }
+	
+	
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+ 
+
+
+/* ---------- Header ---------- */
+
+ header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #004080;
+      padding: 1rem 2rem;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+/* ---------- Navigation Bar ---------- */
+
+nav {
+    background-color: #1e3a8a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+/* ---------- Main Content ---------- */
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* ---------- Page Title ---------- */
+
+.page-title {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 6px solid #1e3a8a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.page-title h1 {
+    margin: 0;
+    color: #172554;
+    font-size: 25px;
+}
+
+
+/* ---------- Content Section ---------- */
+
+section {
+    background-color:  white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ---------- Headings ---------- */
+
+ h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #002366;
+      margin-bottom: 30px;
+    }
+
+
+
+h3 {
+	   font-size: 18px;
+	   color: #002366;
+	}
+	
+	
+h4 {
+    color: #334155;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* ---------- Paragraph ---------- */
+
+p {
+    font-size: 17px;
+    text-align: justify;
+    margin: 12px 0;
+}
+
+
+/* ---------- Lists ---------- */
+
+
+ ul.topic-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.topic-list li {
+      background-color: #e9f0ff;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-left: 5px solid #002366;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    ul.topic-list li:hover {
+      background-color: #d4e3ff;
+      cursor: pointer;
+    }
+
+
+/* ---------- Important Information ---------- */
+
+.important {
+    background-color: #fff7ed;
+    border-left: 5px solid #f59e0b;
+    padding: 15px 18px;
+    margin: 20px 0;
+}
+
+.note {
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px 18px;
+    margin: 20px 0;
+}
+
+.warning {
+    background-color: #fef2f2;
+    border-left: 5px solid #dc2626;
+    padding: 15px 18px;
+    margin: 20px 0;
+}
+
+
+/* ---------- Tables ---------- */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+/* ---------- Links ---------- */
+
+main a {
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+main a:hover {
+    color: #dc2626;
+}
+
+
+/* ---------- Cards ---------- */
+
+ .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+
+
+ .note-card {
+      background: white;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #004080;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .note-card h3 {
+      margin: 0 0 0.5rem;
+      color: #333;
+    }
+
+    .note-card p {
+      margin: 0;
+    }
+	
+	.subject-card h2 {
+      border-left: 10px solid #004080;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	  max-width: 400px;
+      margin: 1rem auto;
+      padding: 1rem;
+	}
+	
+		
+
+/* ---------- Image ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 6px;
+}
+
+
+/* ---------- Footer ---------- */
+
+
+
+ footer p {
+      text-align: center;
+  
+    }
+
+
+/* ---------- Mobile Responsive ---------- */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 15px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 11px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .page-title {
+        padding: 18px;
+    }
+
+    .page-title h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .page-title h1 {
+        font-size: 23px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   HISTORY MOCK TEST
+   ========================================= */
+
+.mock-test-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+/* Test Heading */
+
+.test-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.test-heading h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.test-heading p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Test Information */
+
+.test-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.test-info div {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+
+/* Question Box */
+
+.question-box {
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.question-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* Options */
+
+.question-box label {
+    display: block;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: 0.2s;
+}
+
+.question-box label:hover {
+    background: #f2f2f2;
+}
+
+.question-box input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+
+
+/* Submit */
+
+.submit-section {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.submit-section button {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* Result */
+
+.result-box {
+    display: none;
+    margin: 30px 0;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result-box h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.result-box p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Footer */
+
+.site-footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .mock-test-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .test-heading h1 {
+        font-size: 25px;
+    }
+
+    .test-heading p {
+        font-size: 15px;
+    }
+
+    .test-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .question-box {
+        padding: 18px;
+    }
+
+    .question-box h3 {
+        font-size: 17px;
+    }
+
+    .question-box label {
+        font-size: 15px;
+        padding: 11px;
+    }
+
+    .submit-section button {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .test-info {
+        grid-template-columns: 1fr;
+    }
+
+    .test-heading h1 {
+        font-size: 22px;
+    }
+
+}
+
+
+.answer-feedback {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.answer-feedback.correct {
+    border: 2px solid #2e7d32;
+    background: #e8f5e9;
+}
+
+.answer-feedback.wrong {
+    border: 2px solid #c62828;
+    background: #ffebee;
+}
+
+.answer-feedback.unattempted {
+    border: 2px solid #ef6c00;
+    background: #fff3e0;
+}
+
+.answer-feedback strong {
+    font-size: 17px;
+}
+
+.answer-feedback p {
+    margin: 6px 0 0;
+}
