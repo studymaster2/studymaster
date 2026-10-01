@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studymaster2.github.io/studymaster/sitemap.xml
