@@ -210,6 +210,25 @@ tr:nth-child(even) {
     background-color: #f8fafc;
 }
 
+/* ---------- Mobile Tables ---------- */
+
+@media (max-width: 768px) {
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
 
 /* ---------- Links ---------- */
 
