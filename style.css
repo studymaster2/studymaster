@@ -152,7 +152,7 @@ form {
 
 /* ---------- Content Section ---------- */
 
-section {
+section:not(.hero) {
     background-color:  white;
     margin-bottom: 25px;
     padding: 25px;
