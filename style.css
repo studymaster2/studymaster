@@ -475,10 +475,37 @@ img {
 
 
 
- footer p {
-      text-align: center;
-  
-    }
+ /* ---------- Footer ---------- */
+
+footer {
+  background-color: #e0e0e0;
+  color: #333;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  display: block;
+  color: #004080;
+  text-decoration: none;
+  margin: 0.35rem 0;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p:last-child {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
 
 
 /* ---------- Mobile Responsive ---------- */
