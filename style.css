@@ -477,19 +477,10 @@ img {
 
  /* ---------- Footer ---------- */
 
-.site-footer {
-  margin-top: 40px;
-  padding: 25px 15px;
-  background-color: #f1f3f5;
-  color: #333;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 15px;
 }
@@ -503,6 +494,15 @@ img {
 .footer-links a:hover {
   color: #004080;
   text-decoration: underline;
+}
+
+.site-footer {
+  margin-top: 40px;
+  padding: 25px 30px;
+  background-color: #f1f3f5;
+  color: #333;
+  text-align: left;
+  border-top: 1px solid #ddd;
 }
 
 .site-footer p {
