@@ -480,9 +480,10 @@ img {
 .site-footer {
   margin-top: 40px;
   padding: 25px 15px;
-  background-color: #555;
-  color: #fff;
+  background-color: #f1f3f5;
+  color: #333;
   text-align: center;
+  border-top: 1px solid #ddd;
 }
 
 .footer-links {
@@ -494,18 +495,20 @@ img {
 }
 
 .footer-links a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   font-size: 15px;
 }
 
 .footer-links a:hover {
+  color: #004080;
   text-decoration: underline;
 }
 
 .site-footer p {
   margin: 0;
   font-size: 14px;
+  color: #555;
 }
 
 /* ---------- Mobile Responsive ---------- */
