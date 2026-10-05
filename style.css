@@ -787,3 +787,53 @@ img {
 .answer-feedback p {
     margin: 6px 0 0;
 }
+
+/* ---------- Privacy Policy ---------- */
+
+.privacy-page {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+}
+
+.privacy-policy {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-policy h1 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.privacy-policy h2 {
+  color: #004080;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.privacy-policy p {
+  margin-bottom: 1rem;
+}
+
+.privacy-policy a {
+  color: #004080;
+}
+
+@media (max-width: 600px) {
+
+  .privacy-page {
+    padding: 0 1rem;
+  }
+
+  .privacy-policy {
+    padding: 1.2rem;
+  }
+
+  .privacy-policy h1 {
+    font-size: 1.8rem;
+  }
+
+}
