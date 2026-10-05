@@ -837,3 +837,53 @@ img {
   }
 
 }
+
+/* ---------- Disclaimer ---------- */
+
+.disclaimer-page {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+}
+
+.disclaimer {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.disclaimer h1 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.disclaimer h2 {
+  color: #004080;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.disclaimer p {
+  margin-bottom: 1rem;
+}
+
+.disclaimer a {
+  color: #004080;
+}
+
+@media (max-width: 600px) {
+
+  .disclaimer-page {
+    padding: 0 1rem;
+  }
+
+  .disclaimer {
+    padding: 1.2rem;
+  }
+
+  .disclaimer h1 {
+    font-size: 1.8rem;
+  }
+
+}
