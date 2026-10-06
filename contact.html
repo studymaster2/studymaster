@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | StudyMaster</title>
-  <link rel="stylesheet" href="style.css"/>
+   <meta name="description" content="StudyMaster से संपर्क करें। वेबसाइट से संबंधित सुझाव, प्रश्न, feedback या किसी समस्या के बारे में हमें बताने के लिए Contact Us पेज का उपयोग करें।"/>
 </head>
 <body>
 
@@ -16,53 +16,140 @@
       <a href="about.html">About us</a>
     </nav>
   </header>
+  
+   <main class="container contact-page">
 
-  <div class="container">
     <h1>Contact Us</h1>
+
+    <p>
+      StudyMaster से संबंधित किसी प्रश्न, सुझाव, feedback या वेबसाइट में
+      दिखाई देने वाली किसी समस्या के बारे में आप हमसे संपर्क कर सकते हैं।
+      आपके सुझाव हमें वेबसाइट की सामग्री और उपयोगकर्ता अनुभव को बेहतर बनाने
+      में सहायता कर सकते हैं।
+    </p>
+
+
+    <h3>आप किन विषयों के लिए संपर्क कर सकते हैं?</h3>
+
+    <ul>
+      <li>वेबसाइट की सामग्री से संबंधित सुझाव</li>
+      <li>किसी page या link से संबंधित समस्या</li>
+      <li>अध्ययन सामग्री से संबंधित feedback</li>
+      <li>Quiz या Practice section से संबंधित समस्या</li>
+      <li>वेबसाइट के उपयोग से संबंधित सामान्य प्रश्न</li>
+    </ul>
+
+
+    <h3>अपना संदेश भेजें</h3>
+
+    <p>
+      नीचे दिए गए form में अपना नाम, email address और message भरकर
+      हमें भेज सकते हैं। कृपया अपनी समस्या या सुझाव को स्पष्ट रूप से लिखें।
+    </p>
+
 
     <form id="contact-form"
           action="https://formspree.io/f/xvkgepra"
           method="POST">
 
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name"
-             placeholder="Your name" required>
+
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        autocomplete="name"
+        required>
+
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email"
-             placeholder="your@email.com" required>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="your@email.com"
+        autocomplete="email"
+        required>
+
 
       <label for="message">Message:</label>
-      <textarea id="message" name="message"
-                placeholder="Write your message here..." required></textarea>
+
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Write your message here..."
+        rows="6"
+        required></textarea>
+
 
       <button type="submit">Send Message</button>
+
     </form>
 
-    <div id="success-message" style="display:none;">
+
+    <div id="success-message" class="form-message success-message">
       <h3>Thank You!</h3>
       <p>Your message has been sent successfully.</p>
     </div>
 
-    <div id="error-message" style="display:none;">
+
+    <div id="error-message" class="form-message error-message">
       <p>Something went wrong. Please try again.</p>
     </div>
 
-  </div>
 
-  <script>
+    <h3>Privacy</h3>
+
+    <p>
+      Contact Form के माध्यम से आपके द्वारा दी गई जानकारी का उपयोग
+      आपके प्रश्न, सुझाव या feedback का उत्तर देने के लिए किया जाता है।
+      आपकी जानकारी के संबंध में अधिक जानकारी के लिए हमारी
+      <a href="privacy-policy.html">Privacy Policy</a>
+      देखें।
+    </p>
+
+
+    <p>
+      Terms and Conditions से संबंधित जानकारी के लिए
+      <a href="terms.html">Terms and Conditions</a>
+      page देखें।
+    </p>
+
+  </main>
+
+ <footer>
+  <p>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </p>
+
+  <p>&copy; 2026 StudyMaster. All rights reserved.</p>
+</footer> 
+
+<script>
     const form = document.getElementById("contact-form");
     const successMessage = document.getElementById("success-message");
     const errorMessage = document.getElementById("error-message");
 
     form.addEventListener("submit", async function(event) {
+
       event.preventDefault();
 
       const submitButton = form.querySelector("button");
+
       submitButton.disabled = true;
       submitButton.textContent = "Sending...";
 
+      successMessage.style.display = "none";
+      errorMessage.style.display = "none";
+
       try {
+
         const response = await fetch(form.action, {
           method: "POST",
           body: new FormData(form),
@@ -72,21 +159,29 @@
         });
 
         if (response.ok) {
+
+          form.reset();
           form.style.display = "none";
           successMessage.style.display = "block";
+
         } else {
+
           errorMessage.style.display = "block";
+
           submitButton.disabled = false;
           submitButton.textContent = "Send Message";
         }
 
       } catch (error) {
+
         errorMessage.style.display = "block";
+
         submitButton.disabled = false;
         submitButton.textContent = "Send Message";
       }
+
     });
   </script>
-
+  
 </body>
 </html>
