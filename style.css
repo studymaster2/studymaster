@@ -1074,3 +1074,53 @@ img {
 .error-message {
     background-color: #eeeeee;
 }
+
+/* ===== Click Menu ===== */
+
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 170px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.menu-content a {
+  display: block;
+  padding: 11px 15px;
+  color: #222;
+  text-decoration: none;
+  background: white;
+}
+
+.menu-content a:hover {
+  background: #f1f1f1;
+}
+
+.menu-content.show {
+  display: block;
+}
