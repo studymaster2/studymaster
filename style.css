@@ -471,9 +471,6 @@ img {
 }
 
 
-/* ---------- Footer ---------- */
-
-
 
  /* ---------- Footer ---------- */
 
@@ -976,4 +973,104 @@ img {
         font-size: 0.95rem;
     }
 
+}
+
+/* ---------- Contact Page ---------- */
+
+.contact-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.contact-page h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-page h3 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.contact-page p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.contact-page ul {
+    margin: 10px 0 20px 25px;
+}
+
+.contact-page li {
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+
+/* ---------- Contact Form ---------- */
+
+.contact-page form {
+    margin-top: 25px;
+}
+
+.contact-page label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-page textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-page button {
+    margin-top: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004080;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-page button:hover {
+    opacity: 0.9;
+}
+
+.contact-page button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ---------- Form Messages ---------- */
+
+.form-message {
+    display: none;
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 5px;
+}
+
+.success-message {
+    background-color: #eeeeee;
+}
+
+.error-message {
+    background-color: #eeeeee;
 }
