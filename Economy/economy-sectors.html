@@ -18,10 +18,17 @@
     <div class="logo"> StudyMaster</div>
 
     <nav>
-        <a href="../index.html">Home</a>
-       
-        <a href="../contact.html">Contact us</a>
-        <a href="../about.html">About us</a>
+        <div class="menu">
+  <button class="menu-btn" id="menuBtn">☰ Menu</button>
+
+  <div class="menu-content" id="menuContent">
+    <a href="../index.html">Home</a>
+    <a href="../explore.html">Notes</a>
+    <a href="Practice/index.html">Practice</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+</div>
     </nav>
 
 </header>
@@ -1000,6 +1007,23 @@
     <p>&copy; 2026 StudyMaster | All Rights Reserved</p>
 
 </footer>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
+
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
+
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
+    
+    
 </body>
 </html>
 
