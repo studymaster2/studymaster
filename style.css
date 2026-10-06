@@ -917,3 +917,63 @@ img {
   }
 
 }
+
+/* ---------- About Page ---------- */
+
+.about-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.about-page h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-page h3 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.about-page p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-page ul {
+    margin: 10px 0 20px 25px;
+}
+
+.about-page li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-page a {
+    font-weight: 600;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .about-page {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .about-page h1 {
+        font-size: 1.7rem;
+    }
+
+    .about-page h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-page p,
+    .about-page li {
+        font-size: 0.95rem;
+    }
+
+}
