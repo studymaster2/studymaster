@@ -44,7 +44,7 @@ html {
 nav {
     background-color: #1e3a8a;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
 }
@@ -73,7 +73,7 @@ nav {
     nav {
         width: 100%;
         box-sizing: border-box;
-        justify-content: center;
+        justify-content: space-between;
         padding: 0.4rem 0.5rem;
     }
 
@@ -1080,7 +1080,7 @@ img {
    ================================ */
 
 .menu {
-  position: relative;
+  margin-left: auto;
 }
 
 /* Menu Button */
