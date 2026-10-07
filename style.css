@@ -1086,7 +1086,7 @@ img {
 /* Menu Button */
 
 .menu-btn {
-  background: transparent;
+  background: #004080;
   color: white;
   border: none;
   padding: 10px 16px;
@@ -1098,7 +1098,7 @@ img {
 }
 
 .menu-btn:hover {
-  background: rgba(255,255,255,0.12);
+  background: #004080;
 }
 
 /* Dark Background */
