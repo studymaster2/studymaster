@@ -173,18 +173,16 @@
 	<script>
 const menuBtn = document.getElementById("menuBtn");
 const menuContent = document.getElementById("menuContent");
-const menuOverlay = document.getElementById("menuOverlay");
 
 menuBtn.addEventListener("click", function(event) {
   event.stopPropagation();
-
   menuContent.classList.toggle("show");
-  menuOverlay.classList.toggle("show");
 });
 
-menuOverlay.addEventListener("click", function() {
-  menuContent.classList.remove("show");
-  menuOverlay.classList.remove("show");
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
 });
 </script>
 
