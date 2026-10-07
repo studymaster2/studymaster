@@ -17,14 +17,39 @@
     <div class="logo">StudyMaster</div>
     <nav>
       <div class="menu">
-  <button class="menu-btn" id="menuBtn">☰ Menu</button>
+  <button class="menu-btn" id="menuBtn">
+    ☰ <span>Menu</span>
+  </button>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
 
   <div class="menu-content" id="menuContent">
-    <a href="index.html">Home</a>
-    <a href="explore.html">Notes</a>
-    <a href="Practice/index.html">Practice set</a>
-    <a href="about.html">About us</a>
-    <a href="contact.html">Contact us</a>
+
+    <a href="index.html">
+      <span class="menu-icon">⌂</span>
+      <span>Home</span>
+    </a>
+
+    <a href="notes/index.html">
+      <span class="menu-icon">▣</span>
+      <span>Notes</span>
+    </a>
+
+    <a href="practice/index.html">
+      <span class="menu-icon">✓</span>
+      <span>Practice</span>
+    </a>
+
+    <a href="about.html">
+      <span class="menu-icon">ⓘ</span>
+      <span>About</span>
+    </a>
+
+    <a href="contact.html">
+      <span class="menu-icon">✉</span>
+      <span>Contact</span>
+    </a>
+
   </div>
 </div>
     </nav>
@@ -173,16 +198,18 @@
 	<script>
 const menuBtn = document.getElementById("menuBtn");
 const menuContent = document.getElementById("menuContent");
+const menuOverlay = document.getElementById("menuOverlay");
 
 menuBtn.addEventListener("click", function(event) {
   event.stopPropagation();
+
   menuContent.classList.toggle("show");
+  menuOverlay.classList.toggle("show");
 });
 
-document.addEventListener("click", function(event) {
-  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
-    menuContent.classList.remove("show");
-  }
+menuOverlay.addEventListener("click", function() {
+  menuContent.classList.remove("show");
+  menuOverlay.classList.remove("show");
 });
 </script>
 
