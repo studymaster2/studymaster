@@ -56,6 +56,11 @@ nav {
       font-weight: 500;
     }
 
+.nav a.active {
+  background-color: #fff;
+  color: #004080;
+}
+
 /* ---------- Mobile Header ---------- */
 
 @media (max-width: 768px) {
