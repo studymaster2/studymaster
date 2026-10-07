@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>न्यायिक समीक्षा और न्यायिक सक्रियता | StudyMaster</title>
+    <link rel="canonical" href="https://studymaster2.github.io/studymaster/Polity/judicial-review-activism.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -14,9 +15,17 @@
     <div class="logo"> StudyMaster</div>
 
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="../contact.html">Contact us</a>
-        <a href="../about.html">About us</a>
+        <div class="menu">
+  <button class="menu-btn" id="menuBtn">☰ Menu</button>
+
+  <div class="menu-content" id="menuContent">
+    <a href="../index.html">Home</a>
+    <a href="../explore.html">Notes</a>
+    <a href="../Practice/index.html">Practice set</a>
+    <a href="../about.html">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </div>
+</div>
     </nav>
 </header>
 
@@ -762,10 +771,37 @@
 
 </section>
 </div>
-<footer>
-    <p>&copy; 2026 StudyMaster | All Rights Reserved</p>
+
+<!-- ---------- Footer ---------- -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="../about.html">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+    <a href="../privacy-policy.html">Privacy Policy</a>
+    <a href="../disclaimer.html">Disclaimer</a>
+    <a href="../terms.html">Terms & Conditions</a>
+  </div>
+
+  <p>
+    © 2026 StudyMaster. All rights reserved.
+  </p>
 </footer>
 
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
+
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
+
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
 </body>
 </html>
 
