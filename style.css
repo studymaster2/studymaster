@@ -1190,6 +1190,12 @@ img {
   transition: right 0.3s ease;
 }
 
+@media (min-width: 769px) {
+  .menu-content {
+    width: 20%;
+  }
+}
+
 /* Menu Open */
 
 .menu-content.show {
