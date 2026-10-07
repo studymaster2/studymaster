@@ -1248,3 +1248,184 @@ img {
 
   flex-shrink: 0;
 }
+
+/* =========================================
+POLITY INDEX PAGE
+Additional Professional Sections
+========================================= */
+
+/* ---------- Breadcrumb ---------- */
+
+.breadcrumb {
+max-width: 900px;
+margin: 20px auto 0;
+padding: 0 20px;
+font-size: 14px;
+color: #666;
+}
+
+.breadcrumb a {
+color: #004080;
+text-decoration: none;
+}
+
+.breadcrumb a:hover {
+text-decoration: underline;
+}
+
+.breadcrumb span {
+margin: 0 5px;
+}
+
+/* ---------- Intro Section ---------- */
+
+.intro-section {
+margin: 25px 0;
+padding: 20px;
+background: #f8fafc;
+border-left: 4px solid #004080;
+border-radius: 6px;
+}
+
+.intro-section p {
+margin: 0 0 12px;
+line-height: 1.8;
+color: #333;
+}
+
+.intro-section p:last-child {
+margin-bottom: 0;
+}
+
+/* ---------- Study Guide ---------- */
+
+.study-guide {
+margin: 30px 0;
+padding: 22px;
+background: #f8fafc;
+border-radius: 8px;
+}
+
+.study-guide h2 {
+margin-top: 0;
+color: #004080;
+font-size: 1.35rem;
+}
+
+.study-guide p {
+line-height: 1.8;
+color: #333;
+}
+
+.study-guide ul {
+margin-top: 15px;
+padding-left: 22px;
+}
+
+.study-guide li {
+margin-bottom: 9px;
+line-height: 1.6;
+}
+
+/* ---------- Chapter Section ---------- */
+
+.chapter-section {
+margin-top: 35px;
+}
+
+.chapter-section h2 {
+color: #004080;
+font-size: 1.4rem;
+margin-bottom: 8px;
+}
+
+.chapter-section > p {
+line-height: 1.8;
+color: #444;
+margin-bottom: 22px;
+}
+
+/* ---------- Preparation Section ---------- */
+
+.preparation-section {
+margin: 35px 0;
+padding: 22px;
+background: #f8fafc;
+border-radius: 8px;
+}
+
+.preparation-section h2 {
+margin-top: 0;
+color: #004080;
+font-size: 1.35rem;
+}
+
+.preparation-section p {
+line-height: 1.8;
+color: #333;
+margin-bottom: 12px;
+}
+
+/* ---------- FAQ Section ---------- */
+
+.faq-section {
+margin: 35px 0 10px;
+padding: 22px;
+background: #f8fafc;
+border-radius: 8px;
+}
+
+.faq-section h2 {
+margin-top: 0;
+margin-bottom: 22px;
+color: #004080;
+font-size: 1.35rem;
+}
+
+.faq-section h3 {
+margin-top: 20px;
+margin-bottom: 8px;
+font-size: 1.05rem;
+color: #222;
+}
+
+.faq-section p {
+line-height: 1.8;
+color: #444;
+margin-bottom: 16px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+.breadcrumb {
+margin-top: 15px;
+padding: 0 15px;
+font-size: 13px;
+}
+
+.intro-section,
+.study-guide,
+.preparation-section,
+.faq-section {
+padding: 16px;
+margin-top: 22px;
+}
+
+.study-guide h2,
+.preparation-section h2,
+.faq-section h2,
+.chapter-section h2 {
+font-size: 1.2rem;
+}
+
+.intro-section p,
+.study-guide p,
+.preparation-section p,
+.faq-section p,
+.chapter-section > p {
+line-height: 1.7;
+}
+
+}
