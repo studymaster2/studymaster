@@ -1127,14 +1127,14 @@ img {
   position: fixed;
 
   /* Header ko cover nahi karega */
-  top: 170px;
+  top: 130px;
 
   right: -50vw;
 
-  /* Screen ka sirf 50% */
-  width: 50vw;
+  /* Screen ka sirf 60% */
+  width: 60vw;
 
-  height: calc(100vh - 170px);
+  height: calc(100vh - 130px);
 
   background: white;
 
@@ -1159,9 +1159,9 @@ img {
   display: flex;
   align-items: center;
 
-  gap: 15px;
+  gap: 10px;
 
-  padding: 18px 20px;
+  padding: 15px 18px;
 
   color: #333;
 
