@@ -1224,6 +1224,14 @@ img {
 .menu-content a:hover {
   background: #f3f5f7;
 }
+/* Active Menu Item */
+
+.menu-content a.active {
+  background: #e8f0f8;
+  color: #004080;
+  font-weight: 600;
+}
+
 
 /* Icons */
 
