@@ -1127,14 +1127,14 @@ img {
   position: fixed;
 
   /* Header ko cover nahi karega */
-  top: 130px;
+  top: 110px;
 
-  right: -50vw;
+  right: -60vw;
 
   /* Screen ka sirf 60% */
   width: 60vw;
 
-  height: calc(100vh - 130px);
+  height: calc(100vh - 110px);
 
   background: white;
 
