@@ -24,8 +24,8 @@
     <a href="index.html">Home</a>
     <a href="explore.html">Notes</a>
     <a href="Practice/index.html">Practice set</a>
-    <a href="about.html">About us</a>
-    <a href="contact.html">Contact us</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </div>
   </nav>
@@ -192,7 +192,22 @@
     © 2026 StudyMaster. All rights reserved.
   </p>
 </footer>
+  
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
 
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
+
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
 
 </body>
 </html>
