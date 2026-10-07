@@ -19,8 +19,8 @@
     <a href="index.html">Home</a>
     <a href="explore.html">Notes</a>
     <a href="Practice/index.html">Practice set</a>
-    <a href="about.html">About us</a>
-    <a href="contact.html">Contact us</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html" class="active">Contact Us</a>
   </div>
 </div>
     </nav>
@@ -131,8 +131,8 @@
 <!-- ---------- Footer ---------- -->
 <footer class="site-footer">
   <div class="footer-links">
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="disclaimer.html">Disclaimer</a>
     <a href="terms.html">Terms & Conditions</a>
@@ -194,6 +194,22 @@
 
     });
   </script>
+
+  <script>
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
+
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
+
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
   
 </body>
 </html>
