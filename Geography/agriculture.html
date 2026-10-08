@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agriculture in India | Study Master</title>
+  <link rel="canonical" href="https://studymaster2.github.io/studymaster/Geography/agriculture.html">
   <link rel="stylesheet" href="../style.css" />
    
 </head>
@@ -14,9 +15,17 @@
     <div class="logo"> StudyMaster</div>
 
     <nav>
-       <a href="../index.html">Home</a>
-      <a href="../contact.html">Contact us</a>
-      <a href="../about.html">About us</a>
+       <div class="menu">
+  <button class="menu-btn" id="menuBtn">☰ Menu</button>
+
+  <div class="menu-content" id="menuContent">
+    <a href="../index.html">Home</a>
+    <a href="../explore.html">Notes</a>
+    <a href="../Practice/index.html">Practice set</a>
+    <a href="../about.html">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+  </div>
+</div>
     </nav>
   </header>
 
@@ -652,7 +661,7 @@
         सूखा, फसल क्षति और आय में अस्थिरता का कारण बन सकती है।
       </p>
 
-<div class="container">
+<div class="topic">
       <h3>कृषि क्षेत्र की प्रमुख समस्याएँ</h3>
 
       <ul>
@@ -695,7 +704,7 @@
         जल-कुशल फसलें और भूजल पुनर्भरण</strong> महत्वपूर्ण उपाय हैं।
       </p>
 
-<div class="container">
+<div class="topic">
       <h3>कृषि और जलवायु परिवर्तन</h3>
 
       <p>
@@ -797,7 +806,7 @@
         <li>जलवायु-सहनीय फसलें</li>
       </ul>
 
-<div class="container">
+<div class="topic">
       <h3>महत्वपूर्ण तथ्य</h3>
 
       <ul>
@@ -877,7 +886,7 @@
 
 
       <h3>Quick Revision — एक नजर में</h3>
-
+<div class="table-container">
       <table>
         <tr>
           <th>विषय</th>
@@ -933,7 +942,7 @@
           <td>सतत कृषि</td>
           <td>उत्पादन + आय + संसाधन संरक्षण का संतुलन</td>
         </tr>
-      </table>
+      </table> </div>
 
 
       <h3>निष्कर्ष</h3>
@@ -958,10 +967,37 @@
 
   </section>
 </div>
+<!-- ---------- Footer ---------- -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="../about.html">About Us</a>
+    <a href="../contact.html">Contact Us</a>
+    <a href="../privacy-policy.html">Privacy Policy</a>
+    <a href="../disclaimer.html">Disclaimer</a>
+    <a href="../terms.html">Terms & Conditions</a>
+  </div>
 
-  <footer style="text-align: center;">
-    <p>&copy; 2026 StudyMaster. All rights reserved.</p>
-  </footer>
+  <p>
+    © 2026 StudyMaster. All rights reserved.
+  </p>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
+
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
+
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
+  
 
 </body>
 </html>
