@@ -356,17 +356,19 @@ p {
     margin: 20px 0;
 }
 
-
 /* ---------- Tables ---------- */
 
 .table-container {
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
     margin: 20px 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 table {
     width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     background-color: white;
 }
@@ -382,11 +384,13 @@ td {
     padding: 12px;
     border: 1px solid #d1d5db;
     vertical-align: top;
+    overflow-wrap: anywhere;
 }
 
 tr:nth-child(even) {
     background-color: #f8fafc;
 }
+
 
 /* ---------- Mobile Tables ---------- */
 
@@ -394,17 +398,22 @@ tr:nth-child(even) {
 
     .table-container {
         width: 100%;
+        max-width: 100%;
         overflow-x: auto;
     }
 
     table {
-        min-width: 600px;
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
     }
 
     th,
     td {
-        padding: 8px;
-        font-size: 14px;
+        padding: 7px;
+        font-size: 13px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
     }
 }
 
