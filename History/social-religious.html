@@ -599,26 +599,20 @@
   </footer>
 
   <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const menuContent = document.getElementById("menuContent");
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
 
-    if (menuBtn && menuContent) {
-      menuBtn.addEventListener("click", function (event) {
-        event.stopPropagation();
-        menuContent.classList.toggle("active");
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
 
-        const isOpen = menuContent.classList.contains("active");
-        menuBtn.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!menuContent.contains(event.target) && !menuBtn.contains(event.target)) {
-          menuContent.classList.remove("active");
-          menuBtn.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-  </script>
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
 
 </body>
 </html>
