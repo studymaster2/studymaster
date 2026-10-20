@@ -397,68 +397,139 @@ function checkResult() {
     };
 
     let score = 0;
-    let attempted = 0;
-    let wrong = 0;
-    let unanswered = 0;
-    let reviewHTML = "";
+        let attempted = 0;
+        let resultHTML = "";
 
-    for (let i = 1; i <= 20; i++) {
 
-        const q = "q" + i;
-        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        for (let question in answers) {
 
-        if (selected) {
-            attempted++;
+            const selected =
+                document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
 
-            if (selected.value === answers[q]) {
-                score++;
-            } else {
-                wrong++;
+
+            let selectedText = "उत्तर नहीं दिया गया";
+            let status = "unattempted";
+
+
+            if (selected) {
+
+                attempted++;
+
+                const label =
+                    selected.parentElement.innerText.trim();
+
+                selectedText = label;
+
+
+                if (selected.value === answers[question]) {
+
+                    score++;
+                    status = "correct";
+
+                } else {
+
+                    status = "wrong";
+
+                }
+
             }
-        } else {
-            unanswered++;
+
+
+            resultHTML +=
+                '<div class="answer-review ' + status + '">' +
+
+                '<p>' +
+                questionText[question] +
+                '</p>' +
+
+                '<p><strong>आपका उत्तर:</strong> ' +
+                selectedText +
+                '</p>' +
+
+                '<p><strong>सही उत्तर:</strong> ' +
+                correctAnswersText[question] +
+                '</p>' +
+
+                '</div>';
+
         }
 
-        const selectedValue = selected ? selected.value : "unanswered";
-        const selectedLabel = selected
-            ? selected.parentElement.textContent.trim()
-            : "उत्तर नहीं दिया गया";
 
-        const isCorrect = selectedValue === answers[q];
+        const wrong =
+            attempted - score;
 
-        reviewHTML += `
-            <div class="answer-review">
-                <p><strong>प्रश्न ${i}:</strong> ${questionText[q]}</p>
-                <p>आपका उत्तर: ${selectedLabel}</p>
-                <p>सही उत्तर: ${correctAnswersText[q]}</p>
-                <p class="${isCorrect ? 'correct' : 'wrong'}">
-                    ${isCorrect ? 'सही उत्तर' : 'गलत उत्तर'}
-                </p>
-            </div>
-        `;
+        const unanswered =
+            20 - attempted;
+
+
+        const result =
+            document.getElementById("result");
+
+
+        result.innerHTML =
+
+            "<h4>आपका परिणाम</h4>" +
+
+            "<p><strong>कुल प्रश्न:</strong> 20</p>" +
+
+            "<p><strong>प्रयास किए गए:</strong> "
+            + attempted +
+            "</p>" +
+
+            "<p><strong>सही उत्तर:</strong> "
+            + score +
+            "</p>" +
+
+            "<p><strong>गलत उत्तर:</strong> "
+            + wrong +
+            "</p>" +
+
+            "<p><strong>अनुत्तरित:</strong> "
+            + unanswered +
+            "</p>" +
+
+            "<p><strong>प्राप्त अंक:</strong> "
+            + score +
+            " / 20</p>" +
+
+            "<hr>" +
+
+            "<h4>उत्तर की जाँच</h4>" +
+
+            resultHTML;
+
+
+        result.style.display = "block";
+
+
+        window.scrollTo({
+
+            top: result.offsetTop - 50,
+
+            behavior: "smooth"
+
+        });
+
     }
 
-    document.getElementById("result").innerHTML = `
-        <h2>आपका परिणाम</h2>
-        <p><strong>कुल अंक:</strong> ${score} / 20</p>
-        <p><strong>प्रयास किए गए प्रश्न:</strong> ${attempted}</p>
-        <p><strong>सही उत्तर:</strong> ${score}</p>
-        <p><strong>गलत उत्तर:</strong> ${wrong}</p>
-        <p><strong>अनुत्तरित प्रश्न:</strong> ${unanswered}</p>
-        <h3>उत्तर समीक्षा</h3>
-        ${reviewHTML}
-    `;
-
-    document.getElementById("result").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-}
 </script>
 
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menuContent = document.getElementById("menuContent");
+
+menuBtn.addEventListener("click", function(event) {
+  event.stopPropagation();
+  menuContent.classList.toggle("show");
+});
+
+document.addEventListener("click", function(event) {
+  if (!menuContent.contains(event.target) && event.target !== menuBtn) {
+    menuContent.classList.remove("show");
+  }
+});
+</script>
 </body>
 </html>
