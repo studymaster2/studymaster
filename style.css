@@ -1440,3 +1440,20 @@ line-height: 1.7;
 }
 
 }
+
+/* StudyMaster Custom Logo */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    display: block;
+    width: 190px;
+    max-width: 55vw;
+    height: auto;
+    object-fit: contain;
+}
