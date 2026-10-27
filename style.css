@@ -1457,3 +1457,27 @@ line-height: 1.7;
     height: auto;
     object-fit: contain;
 }
+
+/* StudyMaster Educational Images */
+
+.study-figure {
+    margin: 24px auto;
+    max-width: 850px;
+    text-align: center;
+}
+
+.study-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.study-figure figcaption {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
