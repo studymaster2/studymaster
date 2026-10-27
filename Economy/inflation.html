@@ -290,7 +290,7 @@
     <div class="topic">
         <h3>8. मुद्रास्फीति के प्रमुख आर्थिक सिद्धांत</h3>
 
-        <h3>मुद्रा मात्रा सिद्धांत (Quantity Theory of Money)</h3>
+        <h4>मुद्रा मात्रा सिद्धांत (Quantity Theory of Money)</h4>
 
         <p>
             इस सिद्धांत को निम्न समीकरण से व्यक्त किया जाता है:
@@ -404,9 +404,146 @@
             मुद्रास्फीति के माध्यम से बेरोजगारी को स्थायी रूप से प्राकृतिक
             दर से नीचे रखना संभव नहीं माना जाता।
         </p>
+</div>
+<!-- Phillips Curve Graph -->
+<section id="phillips-curve">
+
+    <h4>फिलिप्स वक्र (Phillips Curve)</h4>
+
+    <p>
+        फिलिप्स वक्र अल्पकाल में मुद्रास्फीति दर और बेरोजगारी दर
+        के बीच संभावित विपरीत संबंध को दर्शाता है।
+    </p>
+
+    <div class="phillips-graph">
+
+        <svg
+            viewBox="0 0 600 420"
+            role="img"
+            aria-labelledby="phillips-title phillips-desc"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <title id="phillips-title">
+                फिलिप्स वक्र: मुद्रास्फीति और बेरोजगारी
+            </title>
+
+            <desc id="phillips-desc">
+                क्षैतिज अक्ष बेरोजगारी दर और ऊर्ध्वाधर अक्ष
+                मुद्रास्फीति दर दर्शाता है। वक्र नीचे की ओर
+                झुकता है और दोनों के बीच अल्पकालीन विपरीत
+                संबंध को प्रदर्शित करता है।
+            </desc>
+
+            <!-- Background -->
+            <rect
+                x="65" y="30"
+                width="490" height="320"
+                fill="#ffffff"
+                stroke="#dddddd"/>
+
+            <!-- Horizontal grid lines -->
+            <g stroke="#e5e7eb" stroke-width="1">
+
+                <line x1="65" y1="94" x2="555" y2="94"/>
+                <line x1="65" y1="158" x2="555" y2="158"/>
+                <line x1="65" y1="222" x2="555" y2="222"/>
+                <line x1="65" y1="286" x2="555" y2="286"/>
+
+            </g>
+
+            <!-- Vertical axis -->
+            <line
+                x1="65" y1="30"
+                x2="65" y2="350"
+                stroke="#222222"
+                stroke-width="2"/>
+
+            <!-- Horizontal axis -->
+            <line
+                x1="65" y1="350"
+                x2="555" y2="350"
+                stroke="#222222"
+                stroke-width="2"/>
+
+            <!-- Y-axis arrow -->
+            <path
+                d="M 59 40 L 65 28 L 71 40"
+                fill="none"
+                stroke="#222222"
+                stroke-width="2"/>
+
+            <!-- X-axis arrow -->
+            <path
+                d="M 545 344 L 557 350 L 545 356"
+                fill="none"
+                stroke="#222222"
+                stroke-width="2"/>
+
+            <!-- Y-axis label -->
+            <text
+                x="22" y="190"
+                transform="rotate(-90 22 190)"
+                text-anchor="middle"
+                font-size="15"
+                fill="#222222">
+                मुद्रास्फीति दर
+            </text>
+
+            <!-- X-axis label -->
+            <text
+                x="310" y="395"
+                text-anchor="middle"
+                font-size="15"
+                fill="#222222">
+                बेरोजगारी दर
+            </text>
+
+            <!-- Phillips Curve -->
+            <path
+                d="M 115 75
+                   C 180 90, 235 145, 300 195
+                   S 420 285, 510 310"
+                fill="none"
+                stroke="#004080"
+                stroke-width="4"
+                stroke-linecap="round"/>
+
+            <!-- Curve label -->
+            <text
+                x="345" y="170"
+                font-size="16"
+                font-weight="bold"
+                fill="#004080">
+                Phillips Curve
+            </text>
+
+            <!-- Direction labels -->
+            <text
+                x="95" y="65"
+                font-size="12"
+                fill="#444444">
+                अधिक मुद्रास्फीति
+            </text>
+
+            <text
+                x="385" y="330"
+                font-size="12"
+                fill="#444444">
+                अधिक बेरोजगारी
+            </text>
+
+        </svg>
+
     </div>
 
+    <p class="graph-note">
+        <strong>नोट:</strong>
+        यह एक अवधारणात्मक ग्राफ है। वक्र की स्थिति और ढलान
+        वास्तविक अर्थव्यवस्था के आँकड़ों को नहीं दर्शाते।
+    </p>
 
+</section>
+    
     <div class="topic">
         <h3>11. मुद्रास्फीति का मापन: CPI, WPI और GDP Deflator</h3>
 
